@@ -5,6 +5,9 @@ import cors from 'cors'
 import helmet from 'helmet';
 import morgan from 'morgan';
 
+
+// Imorts Routes
+import { getDashboardMetrics } from "./controllers/dashboardController";
 // Configurations
 dotenv.config();
 const app = express();
@@ -20,6 +23,8 @@ app.use(cors( ));
 app.get("/hello", (req, res) => {
     res.send("We are here baby")
 })
+
+app.use("/dashboard", getDashboardMetrics)
 
 // Server
 

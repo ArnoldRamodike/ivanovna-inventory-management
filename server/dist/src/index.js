@@ -9,6 +9,8 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const cors_1 = __importDefault(require("cors"));
 const helmet_1 = __importDefault(require("helmet"));
 const morgan_1 = __importDefault(require("morgan"));
+// Imorts Routes
+const dashboardController_1 = require("./controllers/dashboardController");
 // Configurations
 dotenv_1.default.config();
 const app = (0, express_1.default)();
@@ -23,6 +25,7 @@ app.use((0, cors_1.default)());
 app.get("/hello", (req, res) => {
     res.send("We are here baby");
 });
+app.use("/dashboard", dashboardController_1.getDashboardMetrics);
 // Server
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
