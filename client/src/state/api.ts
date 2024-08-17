@@ -9,33 +9,38 @@ export interface Products {
  
   }
   
+  export interface NewProduct {
+    name: string;
+    price: number;
+    rating?: number;
+    stockQuantity: number;
+  }
   
   export interface SalesSummary {
-    saleId :     String   
-    productId:   String
-    timestamp:   string
-    quantity :   number
+    salesSummaryId: string;
+    totalValue: number;
+    changePercentage?: number;
+    date: string;
   }
   
   export interface PurchaseSummary {
-    purchaseSummaryId: String   
-    totalPurchased:  number
-    changePercentagenumber?: number
-    date:              string
+    purchaseSummaryId: string;
+    totalPurchased: number;
+    changePercentage?: number;
+    date: string;
   }
   
   export interface ExpenseSummary {
-    expenseSummaryId:  String             
-    totalExpenses:   number
-    date      :        string
+    expenseSummaryId:  String;             
+    totalExpenses:   number;
+    date: string;
   }
   
   export interface ExpenseByCategorySummury {
-    expenseByCategoryId :String       
-    expenseSummaryId  :  String
-    category           : String
-    amount              : string
-    date            :    string
+    expenseByCategoryId :String  ;     
+    category           : String;
+    amount              : string;
+    date            :    string;
   }
   
 export interface DashboardMetrics {
