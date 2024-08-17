@@ -27,6 +27,7 @@ const CardPurchaseSummury = () => {
             <h2 className="text-lg font-semibold mb-2 px-7 pt-5">
               Purchase Summury
             </h2>
+            <hr />
           </div>
           {/* Body */}
           <div className="">
@@ -57,7 +58,7 @@ const CardPurchaseSummury = () => {
               </div>
             </div>
             {/* Charts */}
-            <ResponsiveContainer width="100%" height={350} className="px-7">
+            <ResponsiveContainer width="100%" height={200} className="p-2">
               <AreaChart
                 data={purchaseData}
                 margin={{ top: 0, right: 0, left: -50, bottom: 45 }}
