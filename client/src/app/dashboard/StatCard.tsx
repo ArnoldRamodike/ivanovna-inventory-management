@@ -32,14 +32,14 @@ const StatCard = ({
       {/* Headr */}
       <div>
         <div className="flex justify-between items-center mb-2 px-5 pt-4">
-          <h2 className="font-semibold text-lg text-green-700">{title}</h2>
+          <h2 className="font-semibold text-lg text-gray-700">{title}</h2>
           <span className=" text-xs text-gray-400">{dateRange}</span>
         </div>
         <hr />
       </div>
       {/* Body */}
       <div className="flex mb-6 items-center justify-around gap-4 px-5">
-        <div className="rounded-full p-5 bg-blue-50 border-s-sky-300 border-[]1px">
+        <div className="rounded-full p-5 bg-blue-50 border-s-sky-300 border-[1px]">
           {primaryIcon}
         </div>
         <div className="flex-1">

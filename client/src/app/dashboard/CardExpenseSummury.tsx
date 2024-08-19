@@ -30,9 +30,6 @@ const CardExpenseSummury = () => {
     {}
   );
 
-  console.log("initial", expenseByCategorySummury);
-  console.log("formatted", expenseSummary);
-
   const expenseCategries = Object.entries(expenseSums).map(([name, value]) => ({
     name,
     value,
