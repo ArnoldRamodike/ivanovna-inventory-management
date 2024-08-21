@@ -36,7 +36,7 @@ app.use("/expenses", expenseRoutes)
 
 const port = Number(process.env.PORT) || 5000;
 
-app.listen(port,"0.0.0.0" () => {
+app.listen(port,"0.0.0.0", () => {
     console.log(`Sever starteed on port: ${port}`);
 
 })
