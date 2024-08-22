@@ -109,10 +109,7 @@ const CardExpenseSummury = () => {
               <div className="mt-3 flex justify-between items-center px-7 mb-4">
                 <div className="pt-2">
                   <p className="text-xs">
-                    Avarage:{" "}
-                    <span className="font-semibold">
-                      ${expenseSummary.totalExpenses.toFixed(2)}
-                    </span>
+                    Avarage: <span className="font-semibold">$20</span>
                   </p>
                 </div>
                 <span className="flex items-center mt-2">
