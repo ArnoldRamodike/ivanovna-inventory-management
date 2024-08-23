@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 export interface Products {
-  productId: String
-  name: String
+  productId: string
+  name: string
   price: number
   rating?: number
   stockQuantity: number
@@ -31,14 +31,14 @@ export interface PurchaseSummary {
 }
 
 export interface ExpenseSummary {
-  expenseSummaryId: String;
+  expenseSummaryId: string;
   totalExpenses: number;
   date: string;
 }
 
 export interface ExpenseByCategorySummury {
-  expenseByCategoryId: String;
-  category: String;
+  expenseByCategoryId: string;
+  category: string;
   amount: string;
   date: string;
 }
