@@ -57,7 +57,9 @@ const Navbar = () => {
             </button>
           </div>
           <div className="relative">
-            <Bell className="cursor-pointer text-gray-500 " size={24} />
+            <Link href={"/notifications"}>
+              <Bell className="cursor-pointer text-gray-500 " size={24} />
+            </Link>
             <span className="absolute -top-2 -right-2 inline-flex items-center justify-center px-[0.3rem] text-xs font-semibold leading-none text-red-100 bg-red-400 rounded-full">
               2
             </span>
