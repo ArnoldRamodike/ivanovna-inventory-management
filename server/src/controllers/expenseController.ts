@@ -17,7 +17,7 @@ export const getExensesByCategory = async (req: Request, res: Response) => {
             })
         );
 
-        res.json(expenseByCategorySummury);
+        res.status(200).json(expenseByCategorySummury);
     } catch (error) {
         res.status(500).json({ message: "Error retieving Expenses by Category" })
     }

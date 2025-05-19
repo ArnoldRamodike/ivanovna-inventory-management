@@ -46,7 +46,7 @@ export const getDashboardMetrics = async(
             })
         );
 
-        res.json({
+        res.status(200).json({
             popularProducts,
             salesSummury,
             purchaseSummury,
