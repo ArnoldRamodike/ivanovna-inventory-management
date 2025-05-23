@@ -90,7 +90,7 @@ const Sidebar = () => {
             isSidebarCollapsed ? "hidden" : "block"
           } font-extrabold text-2xl`}
         >
-          Polly
+          Polly Inventory
         </h1>
 
         <button
