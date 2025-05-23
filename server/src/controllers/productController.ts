@@ -21,6 +21,26 @@ export const getProducts = async (req: Request, res: Response) => {
     }
 }
 
+export const getProduct = async (req: Request, res: Response) => {
+    try {
+        const id = req.params;
+        const product = await prisma.products.findFirst({
+            where: {
+                productId: id
+            }
+        });
+        if (!product) {
+            res.status(401).json({message: `Could not find product with id: ${id}`});
+        }
+
+        res.status(200).json(product);
+
+    } catch (error) {
+        res.status(500).json({ message: "Error retriving products" })
+    }
+}
+
+
 export const createProduct = async (req: Request, res: Response) => {
     try {
         const { productId, name, price, rating, stockQuantity } = req.body;
