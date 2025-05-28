@@ -25,14 +25,13 @@ export const getExensesByCategory = async (req: Request, res: Response) => {
 
 export const createExpense = async (req: Request, res: Response) => {
     try {
-        const { amount, category, expenseId } = req.body;
+        const { amount, category } = req.body;
 
         const product = await prisma.expenses.create({
             data: {
                 amount,
                 category,
                 timestamp: Date.now().toString(),
-                expenseId
             }
         });
 
