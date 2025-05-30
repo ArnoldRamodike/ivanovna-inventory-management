@@ -59,3 +59,54 @@ export const createProduct = async (req: Request, res: Response) => {
         res.status(500).json({ message: "Error creating products" })
     }
 }
+
+export const updateProduct = async (req: Request, res: Response) => {
+    try {
+         const {id} = req.params;
+         const { name, price, rating, stockQuantity } = req.body;
+         
+         const product = await prisma.products.findUnique({
+            where:{
+                productId: id
+            }
+         });
+
+        if (!product) {
+            res.status(404).json({message: `Could not find product with id: ${id}`})
+        }
+
+        const updateProduct = await prisma.products.update({
+            where: {
+                productId: product?.productId
+            },
+            data:{
+                name,
+                price,
+                rating,
+            }
+        });
+
+        res.status(201).json(updateProduct)
+    } catch (error) {
+        res.status(500).json({ message: "Error creating products" })
+    }
+}
+
+export const deleteProduct = async (req: Request, res: Response) => {
+    try {
+        const {id} = req.params;
+        const product = await prisma.products.delete({
+            where: {
+                productId: id
+            }
+        });
+        if (!product) {
+            res.status(401).json({message: `Could not find product with id: ${id}`});
+        }
+
+        res.status(200).json({ message: "Product deleted successfully." });
+
+    } catch (error) {
+        res.status(500).json({ message: "Error deleting product." })
+    }
+}
